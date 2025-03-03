@@ -5,9 +5,9 @@
     "main": "server.js",
     "type": "module",
     "scripts": {
-        "start": "nodemon server.js",
-        "build": "nodemon server.js",
-        "start:local": "nodemon server.js",
+        "start": "node server.js",
+        "build": "tsc",
+        "start:local": "node server.js",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
