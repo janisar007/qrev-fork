@@ -43,6 +43,9 @@ app.use(signAccessToken);
 
 setRoutes(app);
 
+
+
+
 app.all("*", invalidRouteHandler);
 
 app.use(errorHandler);
