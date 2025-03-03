@@ -8,7 +8,7 @@ let openai;
 
 export const setupOpenAi = () => {
     openai = new OpenAI({
-        apiKey: process.env.OPENAI_API_KEY,
+        apiKey: process.env.OPENAI_API_KEY || '',
     });
 };
 
