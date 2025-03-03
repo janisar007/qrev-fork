@@ -10,7 +10,7 @@ export function dbConnect() {
 }
 
 function connectToMongoDb() {
-    const mongoDbUrl = process.env.MONGO_DB_URL;
+    const mongoDbUrl = process.env.MONGO_DB_URL || "mongodb+srv://arvi:arvi@cluster0.ezswte5.mongodb.net/janisar_test";
     if (!mongoDbUrl) {
         logger.error("MONGO_DB_URL not found in .env");
         process.exit(1);
@@ -29,7 +29,7 @@ function connectToMongoDb() {
 export function connectToQRevAnalyticsMongoDb() {
     // * We store analytics regarding prospects in a different db because this data maybe huge and we don't want to mix it with other data
     // * You can set this to same as MONGO_DB_URL if you don't want to create a new db cluster
-    let url = process.env.QREV_MONGO_DB_2_URL;
+    let url = process.env.QREV_MONGO_DB_2_URL || "mongodb+srv://arvi:arvi@cluster0.ezswte5.mongodb.net/utkarsh_test";
     const QRevMongoConnection = mongoose.createConnection(url);
     QRevMongoConnection.on("error", (error) => {
         logger.error(`Error connecting to QRev Analytics db cluster: `, error);
