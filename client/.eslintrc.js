@@ -5,7 +5,7 @@ module.exports = {
   plugins: ['@typescript-eslint', '@typescript-eslint/eslint-plugin'],  
   root: true,
   rules: {
-    "linebreak-style": ["error", "windows"],
+    "linebreak-style": ["off"],
     '@typescript-eslint/no-explicit-any': 'off',
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': [
